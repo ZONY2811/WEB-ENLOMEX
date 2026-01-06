@@ -1,0 +1,659 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+      font-family: 'Roboto', sans-serif;
+      padding-top: 160px;
+}
+/*
+.btn-principal{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: #F79845;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}*/
+
+.btn-principal:hover{
+    background-color: #EFEFEF;
+}
+
+header{
+      display: flex;
+      min-height: 20px;
+      padding: 10px;
+      background-color: #FA771B;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+
+}
+
+header.scroll {
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.logo img{
+      height: 140px;
+      width: auto;
+      background-color: transparent;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+}
+
+.nav-list{
+      opacity: 1;
+      visibility:visible;
+      list-style: none;
+      display: flex;
+      gap: 1.3rem;
+}
+
+.nav-list li a{
+    text-decoration: none;
+    font-size: 2rem;
+    white-space: nowrap;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.nav-list li a:hover{
+color: #ADADAD;
+}
+
+.abrir-menu,
+.cerrar-menu{
+    display: none;
+    border: 0;
+    font-size: 4rem;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#hero{
+    height: 800px;
+    width: 1525px;
+    max-height: 800px;
+    max-width: 1520px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;  
+    display: block;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+ 
+#hero .box{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0; 
+  transition: opacity 0.5s ease-in-out;
+  background-size: cover;
+  background-position: center;
+}
+
+#hero .arrow {
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  font-size: 3rem;
+  padding: 10px 20px;
+  top: 48%;
+  transform: translateY(-50%);
+  z-index: 10;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.5);
+}
+
+#hero .arrow.left {
+    left: 15px;
+}
+
+#hero .arrow.right {
+    right: 15px;
+}
+
+#hero .arrow:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+     #hero h1{
+          z-index: 5;
+          opacity: 0;
+          font-size: 6rem;
+          top: 40%;
+          color: #FFFFFF;
+     }
+
+     #hero h2{
+          top: 50%;
+          z-index: 5;
+          opacity: 0;
+          font-size: 4rem;
+          margin-bottom: 10px;
+          color: #838383;
+     }
+
+#hero .box.active{
+     opacity: 1;
+}
+
+#hero h1, 
+#hero h2 {
+     opacity: 1;
+     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);  
+}
+
+#hero .carousel-text{
+     position: absolute;
+     top: 30%;
+     left: 50%;
+     padding: 20px;
+     transform: translateX(-50%);
+}
+
+#hero .carousel-text .Ventajas-Competitivas{
+     font-size: 6rem;
+     top: 50%;
+     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+     color: #dbd9d9;
+}
+
+.container{
+     display: flex;
+     max-width: 1500px;  
+     flex-wrap: wrap;
+}
+
+.flex-container{
+     position: relative;
+     align-items: center;
+     width: 100%;
+     max-width: 2000px;
+     z-index: 2;   
+}
+
+#Conocenos {
+     scroll-margin-top: 200px; 
+     display: flex;
+     justify-content: center;
+}
+
+#Conocenos .container {
+     max-width: 100%;
+     height: 1000px; 
+     padding: 20px 40px;  
+     display: flex;
+     flex-direction: column;
+     position: relative;
+     margin-left: 10px;
+     margin-right: 10px;
+     align-items: center;
+     justify-content: flex-start; 
+     border-radius: 10px;
+     background-image: linear-gradient(
+     0deg,
+     rgba(0,0,0,0),
+     rgba(0,0,0,0)
+     )
+     ,url("../Imagenes/Camiones_2.png");
+     background-repeat: no-repeat;
+     background-size: 1550px auto;
+     background-position: center center;      
+
+}
+
+#Conocenos  .flex-container h2{
+     font-size: clamp(3.5rem, 5vw, 6rem);
+     letter-spacing: 1px;
+     scroll-margin-top: 100px;
+     max-width: 93%;
+     margin-right: 5%;
+     text-transform: uppercase;
+     text-align: right;
+     white-space: nowrap;
+     color: #F79845;
+}
+
+
+#Conocenos .box{ 
+     text-align: justify;
+     position: relative;
+     width: 100%;
+     max-width: 1550px;
+     font-size: 2.2rem;
+     opacity: 0;
+     transform: translateY(10px);
+     transform: translate3d(0, 10px, 0);
+     transition: opacity 0.4s ease-in-out, opacity 0.4s ease-out;
+     will-change: transform, opacity;
+     color: #ffffff;
+     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);  
+}
+
+#Conocenos .box.show{
+     opacity: 1;
+     transform: translate(0);
+}
+
+#Principios {  
+     margin-top: 10px;
+     display: flex;
+     justify-content: center;
+}
+
+.flex-principios{
+     display: flex;
+     
+}
+
+#Principios h3{
+     color: #EA7525;
+     font-size: 2.5rem;
+     margin-bottom: 10px;
+}
+
+#Principios .flex-principios{
+     flex-wrap: wrap;
+     gap: 1rem;
+     justify-content: center;
+     max-width: 1500px; 
+     margin: 0 auto;
+}
+
+#Principios .flex-principios .box{
+     background-color: #ffffff;
+     color: #646363;
+     text-align: center;
+     transition: all 0.3s ease; 
+     flex: 1 1 380px; 
+     max-width: 480px;
+     padding: 20px;
+     margin-bottom: 5px;
+     font-size: 1.5rem;
+     border-radius: 20px;
+   
+}
+
+#Principios .flex-principios .box:hover {
+     background-color: #EA7525; 
+     color: #ffffff; 
+}  
+
+#Principios .flex-principios .box:hover h3{
+     color: #595656f8; 
+}
+
+#Nuestros-Servicios{
+     text-align: center;
+     padding: 0 40px;
+     opacity: 0;
+     transform: translateY(50px);
+     scroll-margin-top: 185px;
+     transition: all 0.8s ease-out;
+     max-width: 1600px;
+     margin: 0 auto;
+     overflow: hidden;
+     box-sizing: border-box;
+}
+
+#Nuestros-Servicios.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#Nuestros-Servicios h2{
+     font-size: 3rem;
+     margin-bottom: 40px;
+     margin-top: 40px;
+     letter-spacing: 2px;
+     border-radius: 10px;
+     padding: 20px 60px;
+     display: inline-block;
+     color: #ffffff;
+     background-color: #EA7525;
+     box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+     text-transform: uppercase;
+}
+
+#Nuestros-Servicios .flex-servicios{
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 4rem;
+     margin: 0 auto;
+     justify-items: center;
+     align-items: stretch;
+}
+
+#Nuestros-Servicios .flex-servicios .box{
+     display: flex; 
+     flex-direction: column;
+     text-align: center;
+     justify-content: space-between;
+     transition: all 0.3s ease;
+     font-size: 1.8rem;
+     margin-bottom: 20px;
+     border-radius: 10px;
+     width: 100%;
+     min-height: 300px;
+     color: #FFFFFF;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     transform: scale(1);
+     background-color: #5e5e5e32;
+}
+
+#Nuestros-Servicios .flex-servicios .box:hover{
+     transform: scale(1.05);
+     box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+#Nuestros-Servicios .flex-servicios .box h3{
+     margin-top: 15px;
+     font-size: 2rem;
+     color: #616161;
+}
+
+#Nuestros-Servicios .flex-servicios .box img{
+     width: 100%;
+     height: 450px;
+     border-radius: 10px;
+     object-fit: cover;
+     display: block;
+}
+
+#Ubicacion{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     box-sizing: border-box;
+     padding: 40px 30px;
+     background-color: #f9923e;
+     scroll-margin-top: 150px;
+     width: 100%;
+     
+}
+
+#Ubicacion .Contacto-form{
+     max-width: 600px;
+     padding: 20px;
+     margin: 0 0 30px 0;
+     display: flex;
+     flex-direction: column;
+}
+
+#Ubicacion .Contacto-form label{
+     color: #ffffff;
+     font-size: 2rem;
+     font-weight: bold;
+     margin-right: 100px;
+}
+
+.form-group input,
+.form-group textarea{
+     margin-top: 15px;
+}
+
+#Ubicacion .Contacto-form .form-group input,
+#Ubicacion .Contacto-form .form-group textarea{
+     flex: 1;
+     width: 100%;
+     padding: 30px;
+     margin-bottom: 10px;
+     border-radius: 6px;
+     font-size: 1rem;
+     border: 1px solid #ccc;
+     resize: none;
+}
+
+#Ubicacion .Contacto-form button{
+     padding: 12px;
+     border-radius: 6px;
+     font-size: 1.5rem;
+     font-weight: bold;
+     color: #ffffff;
+     background-color: #fd7709;
+     border: none;
+     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#Ubicacion .Contacto-form button:hover{
+     background-color: #f9923e;
+     transform: scale(1.05);
+}
+
+#Ubicacion .flex-ubicacion{
+     display: flex;
+     justify-content: space-between;
+     max-width: 1200px;
+     gap: 30px;
+     align-items: flex-start;
+     margin: 0 auto;  
+}
+
+#Ubicacion h3{
+     width: 100%;
+     font-size: 3rem;
+     margin-bottom: 30px;
+     margin-left: 12px;
+     font-weight: 600;
+     text-align: left;
+     color: #ffffff;
+}
+
+#Ubicacion .mapa{
+     width: 90%;
+     height: 100%;
+     max-height: 2000px;
+     max-width: 700px;
+     margin-top: 75px;
+
+}
+
+
+#Informacion-Contacto {   
+     display: flex;
+     background-color: #616161; 
+     color: #FFFFFF; 
+     justify-content: center;
+     text-align: center;
+     flex-direction: column;
+     padding: 5px 1px;
+     gap: 1rem;
+}
+
+#Informacion-Contacto .Contacto .copy{    
+     max-width: 800px;
+     color: #E0E0E0;      
+}
+
+#Informacion-Contacto h3 {
+     margin-bottom: 15px;
+     font-size: 1.5rem;
+}
+
+#Informacion-Contacto p {
+     margin: 5px 0;
+     line-height: 1.1;
+     font-size: 1.2rem;
+}
+
+#Informacion-Contacto a {
+     color: #FFFFFF;
+     text-decoration: none;  
+     transition: 0.3s;
+}
+
+#Informacion-Contacto a:hover {
+     color: #ADADAD; 
+}
+
+@media (max-width:1000px) {
+     * {
+          transition-duration: 0.3s !important;
+     }
+
+     .abrir-menu,
+     .cerrar-menu{
+          display: block;
+          border: 0;
+          font-size: 2.5rem;
+          background-color: transparent;
+          cursor: pointer;
+     }
+
+     #Conocemnos .box,
+     #Nuestros-Servicios,
+     #hero .box{
+          transition-duration: 0.3s;
+          transition-timing-function: ease-out;
+     }
+
+     #Ubicacion .flex-ubicacion{
+          flex-direction: column;
+     }
+
+     #Ubicaion .col-izquierda,
+     #Ubicacion .col-derecha{
+     width: 100%;
+     }
+
+     #Nuestros-Servicios .flex-servicios {
+     grid-template-columns: 1fr; 
+     }
+
+     h1{
+     font-size: clamp(1.8rem, 6vw, 3rem);
+     }
+
+     h2{
+     font-size: clamp(1.4rem, 5vw, 2.5rem);
+     }
+
+     h3{
+     font-size: clamp(1.1rem, 4.5vw, 2rem);
+     }
+
+     #hero{
+       width: 98%;
+       max-height: 700px;
+       position: relative;
+       overflow: hidden;
+     }
+
+     #hero .box{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     opacity: 0; 
+     transition: opacity 0.5s ease-in-out;
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+     }
+
+     #hero .arrow{
+     font-size: 2.5rem;
+     padding: 8px 12px;
+     }
+
+     #hero .carousel-text h1 {
+     font-size: clamp(4rem, 7vw, 2.5rem);
+     }
+
+     #hero .carousel-text h2,
+     #hero .carousel-text h2.Ventajas-Competitivas {
+     font-size: clamp(4rem, 5vw, 1.8rem);
+    }
+    #Nuestros-Servicios h2 {
+        font-size: 2.2rem;
+        padding: 10px 20px;
+    }
+
+    #Nuestros-Servicios .flex-servicios .box img {
+        height: 200px;
+    }
+
+    #Principios .flex-principios {
+        flex-direction: column; 
+        gap: 1.5rem; 
+        align-items: center; 
+    }
+    
+    .abrir-menu{
+        color: #616161;
+    }
+
+    .cerrar-menu{
+        color: #FFFFFF;
+    }
+
+    nav{
+      position: fixed; 
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      position: absolute;
+      gap:3rem;
+      padding: 1rem;
+      opacity: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      right: -300px;
+      width: 300px;
+      height: 500vh;
+      transition: right 0.3s ease, opacity 0.3s ease;
+      background-color: #616161;
+    }
+
+    .nav.visible{
+      right:0;
+      opacity: 1;
+      visibility: visible;
+    } 
+
+    .nav-list{
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5rem;
+    }
+    
+}
+@media (prefers-reduced-motion: reduce) {
+* {
+     animation-duration: 0.01ms !important;
+     animation-iteration-count: 1 !important;
+     transition-duration: 0.01ms !important;
+     scroll-behavior: auto !important;     
+ }
+}
